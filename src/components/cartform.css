@@ -7,8 +7,12 @@
 
 .set-grid{
     display:flex;
+    justify-content:center;
+    margin: 0 auto;
+    padding: 1rem;
   flex-wrap: wrap;
     width: 100%;
     height:auto;
+    /* background:#28947e; */
 }
 
