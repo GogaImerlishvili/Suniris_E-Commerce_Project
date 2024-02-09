@@ -3,6 +3,7 @@ import {Home,Contact,Loginform,Privacy,Signup,Navbar,Footer,Order} from './compo
 import {BrowserRouter as Router,Routes,Route} from "react-router-dom"
 import CartForm from './components/CartForm';
 import JewelleryCartForm from './components/JewelleryCartForm';
+import BagsCartForm from './components/BagsCartForm';
 import "./index.css"
 const App = () => {
 
@@ -16,7 +17,7 @@ const App = () => {
         <Route path='/order' element={<Order/>} />
         <Route path='/jewellery' element={<JewelleryCartForm />} />
         <Route path='/posters' element={<CartForm />} />
-        <Route path='/contact' element={<Contact />} />
+        <Route path='/bags' element={<BagsCartForm />} />
         <Route path='/signup' element={<Signup />} />
         </Routes>  
    </Router>
