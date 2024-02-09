@@ -1,10 +1,6 @@
 import { createTransport } from "nodemailer";
 import { google } from "googleapis";
 
-const CLIENT_ID = "412177978138-ulqpmb1gutrc1j8fdoka4t04d4pd1n7t.apps.googleusercontent.com";
-const CLIENT_SECRET = "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";
-const REDIRECT_URI = "https://developers.google.com/oauthplayground";
-const REFRESH_TOKEN = "1//04HP31POkGtu4CgYIARAAGAQSNwF-L9IrcB00ZPweyUrzcp8B0GFP1t32Lu3k7ZJmHiUHWwKHyLLurMNNSHBJE2DHTjhePWbgr14";
 
 const oAuth2Client = new google.auth.OAuth2(CLIENT_ID, CLIENT_SECRET, REDIRECT_URI)
 oAuth2Client.setCredentials({ refresh_token: REFRESH_TOKEN, scope: "https://www.googleapis.com/auth/gmail.send" })
