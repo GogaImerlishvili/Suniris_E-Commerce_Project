@@ -7,6 +7,7 @@ import list from './data'
 import TakePic from './TakePic'
 import InstaFeed from './InstaFeed'
 import { Link } from 'react-router-dom'
+// import Order from './Order'
 import Order from './Order'
 const Home = () => {
   return (
