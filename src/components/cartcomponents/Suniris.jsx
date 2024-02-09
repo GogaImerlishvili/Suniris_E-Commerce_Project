@@ -5,10 +5,11 @@ import "./suniris.css"
 
 
 const Suniris = () => {
+  console.log(list)
   return (
     <div className='set-grid'>
     {list.map((list) => ( 
-<ShopCart key={list.id} item={list} />
+<ShopCart key={list.id} item={list}  />
     ))} </div>
   )
 }
