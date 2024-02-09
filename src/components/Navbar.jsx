@@ -66,7 +66,7 @@ const Navbar = () => {
                 <li className='nav-item'><Link to="/" className='nav-links' onClick={closeMobileMenu} ><HomeIcon />მთავარი</Link></li>
                 <li className='nav-item'><Link to="/jewellery" className='nav-links' onClick={closeMobileMenu} ><DiamondIcon />სამკაული</Link></li>
                 <li className='nav-item'><Link to="/posters" className='nav-links' onClick={closeMobileMenu} ><DynamicFeedIcon />პოსტერები</Link></li>
-                <li className='nav-item'><Link to="/" className='nav-links' onClick={closeMobileMenu} ><ShoppingBagIcon />ჩანთები</Link></li>
+                <li className='nav-item'><Link to="/bags" className='nav-links' onClick={closeMobileMenu} ><ShoppingBagIcon />ჩანთები</Link></li>
                 <li className='nav-item'><Link to="/" className='nav-links' onClick={closeMobileMenu} ><ConnectWithoutContactIcon />საკონტაქტო</Link></li>
                 {/* <li className='nav-item'><Link to="/" className='nav-links' onClick={closeMobileMenu} >ავტორიზაცია</Link></li> */}
                 {/* <li className='nav-item'><Link to="/" className='nav-links' onClick={closeMobileMenu} >შესვლა</Link></li> */}

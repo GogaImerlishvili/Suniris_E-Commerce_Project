@@ -7,8 +7,10 @@ const ShopCart = ({item}) => {
     <div className='card-container'>
       <div className='card'>
        <img src={img}  alt="img"  />
-          <h1>{title}</h1>
+       <div className='info'>
+       <h1>{title}</h1>
           <p>{price}₾</p>
+       </div>
       </div>
     </div>
   )

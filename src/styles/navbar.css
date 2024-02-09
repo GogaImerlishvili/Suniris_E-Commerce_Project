@@ -27,6 +27,29 @@ nav {
     cursor: pointer;
 }
 
+.nav-box h2{
+    font-size: 1.2rem;
+    color:white;
+    letter-spacing: 1px;
+}
+
+.order-btn1{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:100px;
+    height:30px;
+    font-size:1.1rem;
+    border-radius: 10px;
+    background-color:#f53f02;;
+    color:white;
+    font-weight:bold;
+    border-color: #0077BE;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    text-decoration:none;
+}
+
 .cart{
     curssor: pointer;
 }

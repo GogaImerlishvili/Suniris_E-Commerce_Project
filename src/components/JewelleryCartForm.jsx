@@ -11,7 +11,6 @@ const JewelleryCartForm = () => {
     </div>
     <div className='set-grid'>
     <Jewellery />
-    <JewelleryShop />
     </div>
     </>
   )
