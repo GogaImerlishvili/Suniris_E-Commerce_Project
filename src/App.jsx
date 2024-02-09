@@ -1,7 +1,8 @@
 import React from 'react';
 import {Home,Contact,Loginform,Privacy,Signup,Navbar,Footer,Order} from './components/index';
 import {BrowserRouter as Router,Routes,Route} from "react-router-dom"
-
+import CartForm from './components/CartForm';
+import JewelleryCartForm from './components/JewelleryCartForm';
 import "./index.css"
 const App = () => {
 
@@ -13,8 +14,8 @@ const App = () => {
     <Routes>
         <Route path='/' element={<Home />}/>
         <Route path='/order' element={<Order/>} />
-        <Route path='/privacy' element={<Privacy />} />
-        <Route path='/loginform' element={<Loginform />} />
+        <Route path='/jewellery' element={<JewelleryCartForm />} />
+        <Route path='/posters' element={<CartForm />} />
         <Route path='/contact' element={<Contact />} />
         <Route path='/signup' element={<Signup />} />
         </Routes>  
