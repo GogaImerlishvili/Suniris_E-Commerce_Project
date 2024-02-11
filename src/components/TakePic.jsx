@@ -24,28 +24,10 @@ const TakePic = () => {
             <img className='image top-right' src={Img2} alt="" />
             <img className='image bottom-left' src={Img3} alt="" />
            <img className="image bottom-right" src={Img1} alt="" />
-            {/* </div> */}
-           
-            {/* <video controls width="800" height="600">
-              <source src={video1}  type="video/mp4"/>
-            </video> */}
-            {/* <div className='picture-bottom'>
-            <img src={Img11} alt="" />
-            <button>bf</button>
-            </div> */}
-        
-        
-           
-               
-    
-        
-        {/* <div className='button-div'> */}
-        
-        {/* <div className="text"> */}
-         
+      
        
         </div>
-        {/* </div> */}
+  
         <div className='button-div'>
             <button className="button" onClick={toggleVisibility}>თვალის ფოტოს გადაღების ინსტრუქცია</button>
 {/* Test */}

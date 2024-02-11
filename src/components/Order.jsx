@@ -1,74 +1,47 @@
 import React, { useState } from 'react';
-import axios from 'axios';
+import ContactMailIcon from '@mui/icons-material/ContactMail';
+import AttachEmailIcon from '@mui/icons-material/AttachEmail';
+import PermPhoneMsgIcon from '@mui/icons-material/PermPhoneMsg';
+import InstuctionVideo from "../assets/video/video-output-0CB6972F-9763-4A31-83B1-2613566C22CA.mov"
+import TakePic from './TakePic';
+import OrderInfo from './OrderInfo';
+import "./order.css"
 
 const Order = () => {
-  const [senderEmail, setSenderEmail] = useState('');
-  const [recipientEmail, setRecipientEmail] = useState('');
-  const [subject, setSubject] = useState('');
-  const [message, setMessage] = useState('');
-  const [file, setFile] = useState(null);
-
-  const handleFileChange = (e) => {
-    setFile(e.target.files[0]);
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-
-    const formData = new FormData();
-    formData.append('senderEmail', senderEmail);
-    formData.append('recipientEmail', recipientEmail);
-    formData.append('subject', subject);
-    formData.append('message', message);
-    if (file) {
-      formData.append('file', file);
-    }
-
-    try {
-      await axios.get('/send-email', formData);
-      alert('Email sent successfully');
-    } catch (error) {
-      console.log(error);
-      alert('Error sending email');
-    }
-  };
-
+  
   return (
-    <form onSubmit={handleSubmit}>
-      <input 
-        type="email" 
-        placeholder="Your email" 
-        required
-        value={senderEmail} 
-        onChange={(e) => setSenderEmail(e.target.value)}
-      />
-      <input 
-        type="email" 
-        placeholder="Recipient email" 
-        required
-        value={recipientEmail} 
-        onChange={(e) => setRecipientEmail(e.target.value)}
-      />
-      <input 
-        type="text" 
-        placeholder="Subject" 
-        required
-        value={subject} 
-        onChange={(e) => setSubject(e.target.value)}
-      />
-      <textarea 
-        placeholder="Message" 
-        required
-        value={message} 
-        onChange={(e) => setMessage(e.target.value)}
-      ></textarea>
-      <input 
-        type="file" 
-        accept=".pdf,.doc,.docx" 
-        onChange={handleFileChange}
-      />
-      <button type="submit">Send Email</button>
-    </form>
+    <>
+        <div className='wrapper'>
+<form className='form' action=''>
+ <h1>შესაკვეთი ფორმა</h1>
+ <div className='input-box'>
+  <input type="mail" placeholder='Sunirisiris@gmail.com' required />
+  <ContactMailIcon className='icon' />
+ </div>
+ <div className='input-box'>
+  <input type="mail" placeholder='თქვენი მეილი' required />
+  <AttachEmailIcon className='icon'/>
+ </div>
+ <div className='input-box'>
+ <input type="tel" placeholder="მიუთითეთ თქვენი ნომერი" />
+  <PermPhoneMsgIcon className='icon'/>
+ </div>
+ <div className='input-box'>
+  <span>ატვირთეთ თვალის ფოტო</span>
+ <input type="file" accept=".jpeg,.png" />
+ </div>
+ <button type="submit">Send Email</button>
+</form>
+    <video controls width="500" height="500">
+      <source src={InstuctionVideo} type="video/quicktime" />
+    </video>
+    <div className='fsa'>
+      <OrderInfo />
+    </div>
+  </div>
+  
+    </>
+
   );
 };
 
