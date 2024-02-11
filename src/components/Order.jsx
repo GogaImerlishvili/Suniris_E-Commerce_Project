@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 import ContactMailIcon from '@mui/icons-material/ContactMail';
 import AttachEmailIcon from '@mui/icons-material/AttachEmail';
 import PermPhoneMsgIcon from '@mui/icons-material/PermPhoneMsg';
-import InstuctionVideo from "../assets/video/video-output-0CB6972F-9763-4A31-83B1-2613566C22CA.mov"
+import InstuctionVideo from "../assets/video/insturctionVideo.mp4"
 import TakePic from './TakePic';
 import OrderInfo from './OrderInfo';
 import "./order.css"
-
+import PaperImg from "../assets/video/desktop-wallpaper-old-paper-swirls-texture-border-background-for-powerpoint-for-your-mobile-tablet-explore-ancient-ancient-greece-ancient-rome-ancient-roman.jpg"
 const Order = () => {
   
   return (
@@ -33,7 +33,7 @@ const Order = () => {
  <button type="submit">Send Email</button>
 </form>
     <video controls width="500" height="500">
-      <source src={InstuctionVideo} type="video/quicktime" />
+      <source src={InstuctionVideo} type="video/mp4" />
     </video>
     <div className='fsa'>
       <OrderInfo />
