@@ -19,8 +19,12 @@ const Footer = () => {
         </div>
         </div>
         <div className='footer-right'>
-         {/* <span><Link><FacebookIcon className='fa-facebook' /></Link></span> */}
-         <InstagramIcon className="fa-facebook" />
+        <a href="https://www.facebook.com/profile.php?id=61551454833895" target="_blank" rel="noopener noreferrer">
+        <FacebookIcon sx={{width:50,height:50,color: "grey"}} />
+        </a>
+        <a href="https://www.instagram.com/suniris__/" target="_blank" rel="noopener noreferrer">
+        <InstagramIcon sx={{width:50,height:50,color: "grey"}} />
+        </a>
         </div>
       </div>
       

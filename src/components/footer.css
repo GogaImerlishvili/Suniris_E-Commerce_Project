@@ -15,7 +15,7 @@
     display:flex;
     justify-content:space-between;
     padding:0.5rem 0rem;
-    margin-left: 15%;
+    margin-left: 12%;
     width:100%;
 }
 .footer-sun{
@@ -51,7 +51,9 @@
     margin-left: 5px;
 }
 .footer-right{
-    width:10%;
+    width: 20%;
+    margin-top:3.5rem;
+    /* height:50%; */
 }
 
 
