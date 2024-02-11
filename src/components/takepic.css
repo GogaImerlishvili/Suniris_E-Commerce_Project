@@ -267,9 +267,8 @@ border: 1px solid #ccc;
 
     .scroll-content p{
         width: 65%;
-        font-size:10px;
+        font-size:12px;
         margin:1px;
-        margin-top:5%;
     }
     
 }
@@ -290,23 +289,12 @@ border: 1px solid #ccc;
 }
 }  
                     
-@media screen and (mix-width: 750px){
-                            .picture > img{
-                                width: 450px;
-                            }
-                            }  
+@media screen and (max-width: 850px){
+
+    
+.picture > img{
+display:none;
+}
+}  
                         
                 
-@media screen and (mix-width: 560px){
-                                .picture > img{
-                                    width: 450px;
-                                }
-                                }  
-                            
-@media screen and (mix-width: 450px){
-                                    .picture > img{
-                                        width: 450px;
-                                    }
-                                    }  
-                                 */
-    
