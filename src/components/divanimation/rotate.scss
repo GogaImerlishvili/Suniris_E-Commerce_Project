@@ -3,23 +3,21 @@
     height: 50vh;
     top: 0;
     padding-top: 18%;
-    // margin-left: -55%;
-    // position: absolute;
     right: 0;
     overflow: hidden;
     display: flex;
 }
 
 .stage1 {
-    width: 200px;
-    height: 200px;
+    width: 400px;
+    height: 400px;
 }
 
 .cubespinner {
     animation-name: spincube;
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
-    animation-duration: 12s;
+    animation-duration: 18s;
     transform-style: preserve-3d;
     transform-origin: 100px 100px 0;
     margin-left: calc(50% - 100px);
