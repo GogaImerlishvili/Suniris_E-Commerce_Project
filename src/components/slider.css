@@ -162,17 +162,17 @@
 
   @media screen and (max-width: 375px){
     .slider{
-      height: 250px;
+      height: 170px;
       margin-bottom: 1rem;
     }
     .swiper{
-      height: 250px;
+      height: 200px;
     }
     .swiper-slide{
     display:flex;
     justify-content:center; 
     align-items:center;
-      height: 250px;
+      height: 150px;
     }
     .img{
       displa:flex;

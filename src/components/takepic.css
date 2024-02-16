@@ -311,7 +311,7 @@ display:none;
         width:130%;
         /* margin-top: 2rem 3rem; */
         /* margin: 0 auto; */
-        font-size: 18px;
+        font-size: 20px;
         margin-left: -5.5rem;
         margin-top: 1rem;
         margin-bottom:1.5rem;
@@ -337,7 +337,7 @@ display:none;
 
   
     .button-div{
-        width:50%;
+        /* width:50%; */
     }
     .button{
         margin-left: -4rem;
@@ -348,4 +348,13 @@ display:none;
 }  
 
 
+@media screen and (max-width: 375px){
     
+    .button-div{
+        max-width: 100%;
+    }
+    .button{
+        width: 150%;
+        font-size: 12px;
+    }
+}
