@@ -25,17 +25,15 @@ const TakePic = () => {
             <img className='image top-right' src={Img2} alt="" />
             <img className='image bottom-left' src={Img3} alt="" />
            <img className="image bottom-right" src={Img1} alt="" />
-      
-       
-        </div>
+          </div>
   
         <div className='button-div'>
             <button className="button" onClick={toggleVisibility}>თვალის ფოტოს გადაღების ინსტრუქცია</button>
 {/* Test */}
 {isVisible && <div className="roman-scroll">
       <div className="scroll-content" style={{
-          width:"550px",
-          height:"405px",
+          maxWidth:"550px",
+          minHeight:"405px",
           backgroundImage: `url(${paperImg})`,
           backgroundSize: "cover",
           // margin:"22px"

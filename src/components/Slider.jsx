@@ -1,20 +1,25 @@
 import React from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { A11y,Autoplay } from 'swiper/modules';
+import { A11y,Autoplay,Pagination,Navigation } from 'swiper/modules';
 import 'swiper/css/bundle';
 import "./slider.css"
 
 const Slider = ({slides}) => {
-  
   if(slides){
   return (
-   
     <Swiper
     className="swiper"
-    modules={[A11y,Autoplay]}
+    modules={[A11y,Autoplay,Navigation]}
     spaceBetween={5}
-    slidesPerView={4}
+    slidesPerView={3}
+    breakpoints={{
+      769: {
+        slidesPerView: 3
+      }
+    }}
+    navigation={{ clickable:true }}
     autoplay
+  
   > 
     {slides.map((slide) => (
   <SwiperSlide key={slide.img}>
