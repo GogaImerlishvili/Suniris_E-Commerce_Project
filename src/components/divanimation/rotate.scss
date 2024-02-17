@@ -97,7 +97,11 @@
     }
 }
 
-@media screen and (max-width: 768px) {}
+@media screen and (max-width: 820px) {
+    .stage-cube-cont {
+        margin-left: -8rem;
+    }
+}
 
 @media screen and (max-width: 750px) {
     .stage-cube-cont {

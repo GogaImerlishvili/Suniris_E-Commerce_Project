@@ -25,8 +25,9 @@ const Home = () => {
       <Slider slides={list} />
       </div>
        {/* <CartForm /> */}
-       {/* <div className='take-pic'> */}
+       <div className='take-pic'>
         <TakePic />
+        </div>
         <InstaFeed />
        {/* </div> */}
       </>

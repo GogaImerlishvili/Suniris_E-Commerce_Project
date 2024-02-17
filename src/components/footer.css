@@ -65,3 +65,20 @@
     margin-top:55%;
     /* font-size:29px; */
 }
+
+@media screen and (max-width: 414px){
+    
+    .copy-right{
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 375px){
+    .footer{
+        width: 100%;
+    }
+  
+    .copy-right{
+        font-size: 11px;
+    }
+}
