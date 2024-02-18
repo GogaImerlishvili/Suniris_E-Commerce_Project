@@ -9,7 +9,7 @@ const Slider = ({slides}) => {
   return (
     <Swiper
     className="swiper"
-    modules={[A11y,Autoplay,Navigation]}
+    modules={[A11y,Autoplay]}
     spaceBetween={5}
     slidesPerView={3}
     breakpoints={{
@@ -17,7 +17,7 @@ const Slider = ({slides}) => {
         slidesPerView: 3
       }
     }}
-    navigation={{ clickable:true }}
+    // navigation={{ clickable:true }}
     autoplay
   
   > 
