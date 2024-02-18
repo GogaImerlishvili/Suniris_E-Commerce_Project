@@ -39,9 +39,7 @@ const Order = () => {
       <OrderInfo />
     </div>
   </div>
-  
     </>
-
   );
 };
 
