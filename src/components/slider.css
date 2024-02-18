@@ -18,14 +18,14 @@
   margin: 0 auto;
   /* justify-content:center; */
     width: 250px;
-    height:400px;
+    height:380px;
     
 }
 
 .title2{
     display:flex;
     justify-content: center;
-    margin-top: -12%;
+    /* margin-top: -10%; */
     align-items: center;
    color: #0077BE; 
    font-size: 26px;
@@ -164,7 +164,7 @@
   @media screen and (max-width: 414px){
     .slider{
       height: 200px;
-      margin-bottom:4rem;
+      margin-bottom:2rem;
     }
     .swiper{
       height: 250px;

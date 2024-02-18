@@ -3,9 +3,7 @@
     flex-wrap:wrap;
     justify-content:center;
     width:100%;
-   /* flex: 1 1 3  00px; */
-    /* justify-content:center; */
-    /* margin: 0 auto; */
+    gap:10px;
     min-height:100vh;
     background-image:url("../images/background.jpg");
     background-size:cover;
@@ -24,8 +22,7 @@ video{
     width: 500px;
 }
 .form{
-    /* display:flex; */
-    /* justify-content:center; */
+  
     width: 500px;
     color:#fff;
     background:transparent;
@@ -91,6 +88,11 @@ video{
     font-weight: 700;
     
 }
+
+@media screen and (max-width: 912px){
+        
+}
+
 @media screen and (max-width: 750px){
    .wrapper{
     ojbect-fit:cover;
@@ -100,4 +102,13 @@ video{
    .form{
     width:220px;
    }
+    }
+
+    @media screen and (max-width: 414px){
+        .form{
+            width: 350px;
+        }
+        .form h1{
+            font-size:24px;
+        }  
     }

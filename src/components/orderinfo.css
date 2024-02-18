@@ -1,11 +1,13 @@
 
+
 .take-pic-insturction{
+    /* border: 2px solid rgba(255,255,255,.2); */
     width:100%;
-  
 }
+
 .take-pic-title{
     margin-top:2rem;
-    margin-left:1rem;
+    margin-left:0.5rem;
     font-size:25px;
     color:white;
     max-width:100%;
@@ -15,44 +17,50 @@
 .instruction{
     width:100%;
 }
-.roman-scroll-order{
-    width: 500px;
-    height: 400px;
-    overflow: hidden;
-    position:relative;
-    margin-left: 2%;
-    margin-top:5%;
-    color:#012359;
-    font-weight:bold;
+
+.change-color{
+    display: flex;
+    justify-content:center;
+    flex-direction:column;
+    border: 2px solid rgba(255,255,255,.2);
 }
 
-.scroll-content-order-page{
-    
-    padding: 20px;
-    position: absolute;
-    top:0;
-    left:0;
-    width:100%;
-}
-
-.scroll-content-order-page p {
-    
-    margin-bottom: 20px;
+.take-pic-instruction p {
+    margin-bottom: 10px;
     margin-top: 5%;
-    letter-spacing: 5px;
+    /* letter-spacing: 5px; */
     width:97.5%;
-    font-weight:bold;
+    /* font-weight:bold; */
     font-size:18px;
     line-height:1.2;
+    color:white;
+    margin-left:2rem;
 }
 
-.roman-scroll::before {
-    content: "";
-    position: absolute;
-    top:0;
-    left: 0;
-    width: 100%;
-    height:100%; 
-    background-size: cover;
-    opacity: 0.5;
+
+@media screen and (max-width: 912px){
+    .change-color p {
+        /* margin-left:-0.3rem; */
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 414px){
+    .take-pic-title{
+        display:flex;
+        justify-content:center;
+        font-size: 16px;
+    }
+    .change-color{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        margin:0 auto;
+        width: 350px;
+    }
+
+    .change-color p{
+        font-size:14px;
+        line-height:1.4;
+    }
 }

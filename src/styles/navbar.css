@@ -50,6 +50,25 @@ nav {
     text-decoration:none;
 }
 
+/* .slogan{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height: 30px;
+    background-color: #e67e22;
+    border-radius: 12px;
+    color: white;
+    font-size: 1.5rem;
+    text-decoration: none;
+    font-weight: bold;
+    cursor:pointer;
+}
+
+.slogan:hover{
+    background-color: #cf711f;
+} */
+
 .cart{
     curssor: pointer;
 }
@@ -66,5 +85,19 @@ nav {
     font-weight: bold;
     border-radius: 5px;
     position: absolute;
+}
+
+@media screen and (max-width: 414px){
+    .order-btn1{
+        width: 100px;
+        font-size: 12px;
+        /* margin-left:-3rem; */
+    }
+    .nav-box h2{
+     display:none;
+    }
+    .cart{
+        margin-left: 1rem;
+    }
 }
 

@@ -122,7 +122,13 @@
 
 @media screen and (max-width: 500px) {
     .stage-cube-cont {
-        margin-left: 1rem;
+        // margin-left: 1rem;
+    }
+}
+
+@media screen and (max-width: 414px) {
+    .stage-cube-cont {
+        margin-left: -2.5rem;
     }
 }
 
@@ -130,11 +136,21 @@
     .stage-cube-cont {
         max-width: 100%;
         height: 250px;
-        margin-left: -0.5rem;
+        margin-left: -1.5rem;
         // margin-top: 0.5rem;
     }
     .stage1 {
         width: 200px;
         height: 200px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .stage-cube-cont {
+        margin-left: -2rem;
+    }
+    .roman-scroll {
+        height: 300px;
+        // margin-left: 0.1rem;
     }
 }

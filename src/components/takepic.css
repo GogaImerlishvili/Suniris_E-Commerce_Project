@@ -281,6 +281,18 @@ border: 1px solid #ccc;
         width: 200px;
         height:200px;
     }
+    .roman-scroll{
+        height: 500px;
+    }
+    .scroll-content{
+        height: 500px;
+        width:100%;
+    }
+    .scroll-content p {
+        font-size: 18px;
+        letter-spacing: 0;
+        width:100%;
+    }
 }  
 
 @media screen and (max-width: 870px){
@@ -361,10 +373,12 @@ display:none;
 @media screen and (max-width: 414px){
     .button{
         /* width: 150%; */
-        font-size: 15px;
+        margin-top:2rem;    
+        font-size: 12px;
     }
     .roman-scroll{
-        margin-top: -1rem;
+        /* margin-top: -1rem; */
+        height: 370px;
     }
     .scroll-content{
         /* margin-top: -2rem; */
@@ -372,24 +386,27 @@ display:none;
     }
     .scroll-content p{
         margin-top:-1rem;
-        font-size: 16px;
+        font-size: 15px;
         letter-spacing:0;
     }
 }
 
 @media screen and (max-width: 375px){
     
-    .button-div{
-        /* max-width: 100%; */
-    }
     .button{
-        /* width: 150%; */
         font-size: 12px;
+        width: 110%;
     }
   
     .scroll-content p{
         margin-top: -1rem;
-        font-size: 13px;
+        font-size: 15px;
         letter-spacing: 0;
     }
+}
+
+@media screen and (max-width: 360px){
+   .button{
+    width:110%;
+   }
 }
