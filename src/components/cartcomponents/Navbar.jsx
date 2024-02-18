@@ -7,7 +7,7 @@ const Navbar = () => {
    <nav>
     <div className='nav-box'>
     <Link className='order-btn1' to="/order" >შეკვეთა</Link>
-        <h2>გადააქციე შენი თვალი ხელოვნებად</h2>
+        <h2 className="slogan">გადააქციე შენი თვალი ხელოვნებად</h2>
         <div className='cart'>
         <span><ShoppingCartIcon /></span>
             <span className='number'>0</span>
