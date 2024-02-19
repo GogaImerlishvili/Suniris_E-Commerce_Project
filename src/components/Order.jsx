@@ -4,138 +4,203 @@ import ContactMailIcon from '@mui/icons-material/ContactMail';
 import AttachEmailIcon from '@mui/icons-material/AttachEmail';
 import PermPhoneMsgIcon from '@mui/icons-material/PermPhoneMsg';
 import InstuctionVideo from "../assets/video/insturctionVideo.mp4"
+import ArrowCircleDownIcon from '@mui/icons-material/ArrowCircleDown';
+import ArrowCircleUpIcon from '@mui/icons-material/ArrowCircleUp';
+import CheckBoxIcon from '@mui/icons-material/CheckBox';
 import OrderInfo from './OrderInfo';
 import "./order.css"  
+
 const Order = () => {
-  // const form = useRef();
-  const [named,setNamed] = useState("");
-  const [email,setEmail] = useState("");
-  const [phone,setPhone] = useState("");
-  const [check,setCheck] = useState({
-    option1:false,
-    option2:false,
-    option3:false,
-  })
-  const [result,setResult] = useState("")
-
-
+  const [open,setOpen] = useState(false);
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    telNumber: '',
+    checkbox1: false,
+    checkbox2: false,
+    checkbox3: false,
+    checkbox4: false,
+    checkbox5: false,
+    checkbox6: false,
+    checkbox7: false,
+    checkbox8: false,
+    checkbox9: false,
+  });
 
   const handleChange = (e) => {
-      const { name, checked } = e.target;
+    setFormData({ ...formData, [e.target.name]: e.target.type === 'checkbox' ? e.target.checked : e.target.value});
+  }
 
-    setCheck((prevCheckboxes) => ({
-      ...prevCheckboxes,
-      [name]: checked,
-    }));
+ 
+ const handleToggle = () => {
+  setOpen(!open)
+ }
+  const serviceId = "service_ijkoz4q";  
+const templateId = "template_l0c4uxl";
+const publicKey = "KCRw-B6zKIJegy5ho";
 
-   
-  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const serviceId = "service_ijkoz4q";
-    const templateId = "template_l0c4uxl";
-    const publicKey = "KCRw-B6zKIJegy5ho";
-
-    // Create a new object that contains dynamic template params 
-    const templateParams = {
-      from_name: named,
-      from_email: email,
-      from_tel: phone,
-      from_check: check,
-      from_option1: check.option1 ? "Option 1 selected" : "",
-      from_option2: check.option2 ? "Option 2 selected" : "",
-      from_option3: check.option3 ? "Option 3 selected" : "",
-      to_name: "Suniris"
-    }
-
-    // Prepare the data to be sent via EmailJS
- 
-
-
-    // Send the mail using EmailJS
-    emailjs.send(serviceId,templateId,templateParams,publicKey)
-    .then((response) => {
-      console.log("Email sent successfully!",response);
-      setNamed("");
-      setEmail("");
-      setPhone("");
-      setCheck("")
-    })
-    .catch((error) => {
-      console.error("Error sending email", error)
-    })
+    // Replace 'YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', and 'YOUR_USER_ID' with your actual values
+    emailjs.send(serviceId,templateId , {
+      from_name: formData.name,
+      from_email: formData.email,
+      from_tel: formData.telNumber,
+      from_checkbox1: formData.checkbox1 ? 'Selected' : 'Not Selected',
+      from_checkbox2: formData.checkbox2 ? 'Selected' : 'Not Selected',
+      from_checkbox3: formData.checkbox3 ? "Selected" : 'Not Selected',
+      from_checkbox4: formData.checkbox4 ? 'Selected' : 'Not Selected',
+      from_checkbox5: formData.checkbox5 ? 'Selected' : 'Not Selected',
+      from_checkbox6: formData.checkbox6 ? 'Selected' : 'Not Selected',
+      from_checkbox7: formData.checkbox7 ? 'Selected' : 'Not Selected',
+      from_checkbox8: formData.checkbox8 ? 'Selected' : 'Not Selected',
+      from_checkbox9: formData.checkbox9 ? 'Selected' : 'Not Selected',
+  
+      
+      // from_checkbox3: formData.checkbox3 ? 'Selected' : 'Not Selected' 
+    }, publicKey)
+      .then((response) => {
+        console.log('Form data sent via email!', response.status, response.text);
+      }, (error) => {
+        console.error('Failed to send form data via email', error);
+      });
   }
 
   return (
     <>
-  {/* <form onSubmit={handleSubmit}>
-      <label>Name</label>
-      <input type="text" value={name} onChange={(e) => setName(e.target.value)} />
-      <label>Email</label>
-      <input type="email" value={email} onChange={(e) => setEmail(e.target.value)}  />
-      <label>Message</label>
-      <input type="tel" value={phone} onChange={(e) => setPhone(e.target.value)}  />
-      <input type="submit" value="Send" />
+    <div className="wrapper">
+    <form className='form' onSubmit={handleSubmit}>
+      <h3>შესაკვეთი ფორმა</h3>
+      <div className='input-box'>
+        <input type="text" name="name" placeholder='სახელი' value={formData.name} onChange={handleChange} />
+        <ContactMailIcon className='icon' />
+      </div>
+      <div className='input-box'>
+        <input type="email" name="email" placeholder='მეილი' value={formData.email} onChange={handleChange} />
+        <AttachEmailIcon className='icon'/>
+      </div>
+      <div className="input-box">
+        <input type="tel" name="telNumber" placeholder='ნომერი' value={formData.telNumber} onChange={handleChange} />
+        <PermPhoneMsgIcon className='icon'/>
+      </div>
+      {/* <div className="input-box">
+        <input type="tel" name="telNumber" placeholder='ფაილის მიმაგრება' value={formData.telNumber} onChange={handleChange} />
+        <PermPhoneMsgIcon className='icon'/>
+      </div> */}
+
+      {/* Check Boxes */}
+      <div className="wrapp">
+      <div onClick={handleToggle} className="select-option">{open ? 'დახურვა' : `პოსტერი ზომების მიხედვით `}</div>
+      {open && (
+        <div>
+          <label>
+            <input
+              type="checkbox"
+              name="checkbox3"
+              checked={formData.checkbox3}
+              onChange={handleChange}
+            />
+            10x15 სმ - 39₾
+          </label>
+          <br />
+          <label>
+            <input
+              type="checkbox"
+              name="checkbox4"
+              checked={formData.checkbox4}
+              onChange={handleChange}
+            />
+            20x20 სმ - 65₾ 
+          </label>
+          <br />
+          <label>
+            <input
+              type="checkbox"
+              name="checkbox5"
+              checked={formData.checkbox5}
+              onChange={handleChange}
+            />
+           25x35 სმ - 85₾
+          </label>
+          <br />
+          <label>
+            <input
+              type="checkbox"
+              name="checkbox6"
+              checked={formData.checkbox6}
+              onChange={handleChange}
+            />
+           30x40 სმ - 105₾
+          </label>
+          <br />
+          <label>
+            <input
+              type="checkbox"
+              name="checkbox7"
+              checked={formData.checkbox7}
+              onChange={handleChange}
+            />
+            40x50 სმ - 125₾ 
+          </label>
+          <br />
+          <label>
+            <input
+              type="checkbox"
+              name="checkbox8"
+              checked={formData.checkbox8}
+              onChange={handleChange}
+            />
+           40x60 სმ - 135₾
+          </label>
+          <br />
+          <label>
+            <input
+              type="checkbox"
+              name="checkbox9"
+              checked={formData.checkbox9}
+              onChange={handleChange}
+            />
+            50x70 სმ - 155₾
+          </label>
+          </div>
+          
+      )}
+        <div className='wrapp-checkbox'>
+      <label>
+        <input type="checkbox" name="checkbox1" checked={formData.checkbox1} onChange={handleChange} />
+        <span className='checkbox-title'>სამკაული</span>
+      </label>
+      <label>
+        <input type="checkbox" name="checkbox2" checked={formData.checkbox2} onChange={handleChange} />
+        <span className='checkbox-title'>ჩანთა</span>
+      </label>
+      
+     <div>
+    
+      </div>
+      
+      </div>
+  
+      </div>
+
+   
+      <button type="submit" className='submit-button'>Send Email</button>
+    
     </form>
-     */}
-        <div className='wrapper'>
-<form className='form' onSubmit={handleSubmit}>
- <h1>შესაკვეთი ფორმა</h1>
- <div className='input-box'>
-  <input type="mail" placeholder='სახელი' value={named} onChange={(e) => setNamed(e.target.value)}  required />
-  <ContactMailIcon className='icon' />
- </div>
- <div className='input-box'>
-  <input type="mail" placeholder='მეილი' value={email} onChange={(e) => setEmail(e.target.value)}  required />
-  <AttachEmailIcon className='icon'/>
- </div>
- <div className='input-box'>
- <input type="tel" placeholder="ნომერი"value={phone} onChange={(e) => setPhone(e.target.value)}  />
-  <PermPhoneMsgIcon className='icon'/>
- </div>
- <label>
-        Option 1
-        <input
-          type="checkbox"
-          name="option1"
-          checked={check.option1}
-          onChange={handleChange}
-          // value={check.option1}
-        />
-      </label>
-      <label>
-        Option 2
-        <input
-          type="checkbox"
-          name="option2"
-          checked={check.option2}
-          onChange={handleChange}
-        />
-      </label>
-      <label>
-        Option 3
-        <input
-          type="checkbox"
-          name="option3"
-          checked={check.option3}
-          onChange={handleChange}
-        />
-      </label>
- {/* <div className='input-box'>
-  <span>ატვირთეთ თვალის ფოტო</span>
- <input type="file" accept=".jpeg,.jpg" name="user_file" />
- </div> */}
- 
- <button type="submit" value="Send">Send Email</button>
-</form>
+
+    <div className="video-instruction">
+      <h3>ვიდეო ინსტრუცტია</h3>
     <video controls width="500" height="500">
       <source src={InstuctionVideo} type="video/mp4" />
     </video>
-    <div className='fsa'>
+    </div>
+
+    <div className='written-instruction'>
       <OrderInfo />
     </div>
-  </div>
+    </div>
     </>
   );
 };
