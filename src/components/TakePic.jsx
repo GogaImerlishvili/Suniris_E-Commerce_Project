@@ -9,7 +9,6 @@ import Img1 from "../images/MVI_8743_vsnsik.jpg"
 import img22 from "../assets/images/old-parchment-paper-ai-generative-free-photo.jpg"
 import Rotate from './divanimation/Rotate'
 import paperImg from "../assets/video/structure-old-paper-5336220.webp"
-
 import { height, margin } from '@mui/system'
 const TakePic = () => {
   const [isVisible,setIsvisible] = useState(false);
@@ -36,14 +35,9 @@ const TakePic = () => {
           minHeight:"405px",
           backgroundImage: `url(${paperImg})`,
           backgroundSize: "cover",
-          // margin:"22px"
-          
         }}>
-       
         <p><strong>I.</strong>ვაბნელებთ ოთახს, სანათს ან ტელეფონის ფანარს მიინათებთ თვალის გვერდითა ჭრილიდან, რაც შეიძლება ახლოს მიიტანთ თვალთან რომ კარგად განათდეს, ვიყურებით კამერაში და არ ვიყენებთ კამერის შუქს, ვიღებთ ფოტოს რაც შეიძლება ახლო მანძილიდან.</p>
          <p><strong>II.</strong> თვალის ირისი უნდა ჩანდეს მთლიანად, ეცადეთ ფართოდ გაახილოთ თვალი, ხელის დახმარებაც არ იქნება პრობლემა.</p>
-        {/* Add more content as needed */}
-
       </div>
     </div>}
     {!isVisible && <Rotate />}
@@ -73,4 +67,4 @@ const TakePic = () => {
   )
 }
 
-export default TakePic
+export default TakePic;
