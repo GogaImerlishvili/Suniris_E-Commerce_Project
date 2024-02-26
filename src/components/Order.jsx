@@ -175,19 +175,12 @@ const publicKey = "KCRw-B6zKIJegy5ho";
       <label>
         <input type="checkbox" name="checkbox2" checked={formData.checkbox2} onChange={handleChange} />
         <span className='checkbox-title'>ჩანთა</span>
-      </label>
-      
+      </label> 
      <div>
-    
       </div>
-      
       </div>
-  
       </div>
-
-   
       <button type="submit" className='submit-button'>Send Email</button>
-    
     </form>
 
     <div className="video-instruction">
