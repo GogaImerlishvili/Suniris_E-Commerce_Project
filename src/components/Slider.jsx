@@ -17,9 +17,7 @@ const Slider = ({slides}) => {
         slidesPerView: 3
       }
     }}
-    // navigation={{ clickable:true }}
     autoplay
-  
   > 
     {slides.map((slide) => (
   <SwiperSlide key={slide.img}>

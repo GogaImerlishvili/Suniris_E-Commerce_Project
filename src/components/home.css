@@ -59,6 +59,11 @@ transform: scale(1.1);
     }
 }
 
+@media screen and (max-width: 1024px){
+    .home-container{
+        height: 300px;
+    }
+}
 @media screen and (max-width: 990px){
 
     .title{
@@ -183,3 +188,13 @@ margin-top:4rem;
     }
 }
    
+@media screen and (max-width: 280px){
+    .title{
+        font-size:14px;
+    }
+    .order-btn{
+        width: 70px;
+        height:30px;
+        font-size:10px;
+    }
+  }

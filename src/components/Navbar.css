@@ -321,3 +321,12 @@
     margin-top: -5.5%
   }
 }
+
+@media screen and (max-width: 280px){
+  .navbar-logo{
+    margin-top: -1.3rem;
+  }
+  .logo-title{
+    font-size:24px;
+  }
+}

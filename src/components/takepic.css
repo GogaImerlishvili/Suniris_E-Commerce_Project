@@ -245,8 +245,8 @@ border: 1px solid #ccc;
         width: 400px;
     }
     .scroll-content p{
-        width: 75%;
-        font-size: 14px;
+        width: 90%;
+        font-size: 12px;
     }
 }
 
@@ -355,6 +355,12 @@ display:none;
         /* color: white; */
     }
   }      
+
+  @media screen and (max-width: 540px){
+    .button{
+        font-size:18px;
+    }
+  }
 
 @media screen and (max-width: 600px){
 
