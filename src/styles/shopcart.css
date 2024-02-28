@@ -32,6 +32,9 @@
     padding: 0.5rem 1rem;
 }
 
+.info-title{
+    margin:0 auto;
+}
 .info >h1{
     font-size:20px;
     color:#c8e3de;
