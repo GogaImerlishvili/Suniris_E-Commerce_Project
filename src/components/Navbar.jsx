@@ -29,22 +29,13 @@ const Navbar = () => {
     }
   return (
     <>
-    {/* <Header /> */}
     <div className='navbar'>
-        {/* <div className={data ? "input-form" : "input-form-not"}>
-            <input type="text" placeholder='Search here' />
-            <SearchIcon className="Search-icon-input" />
-            <CloseIcon onClick={inputHandler} className="close-icon"/>
-        </div> */}
         <div className='navbar-container'>
         <div className='navbar-logo'>
-                    <img className='logo' src={Img} alt='' />
+                   <Link to="/">{<img className='logo' src={Img} alt='' />}</Link> 
                     <label className='logo-title'><label className='sun'>Sun</label>iris</label>
                 </div>
             <div className='menu-icon'>
-                    {/* <div>
-                    <SearchIcon className='search-icon' />
-                    </div> */}
                     {isOpen ? (
                         <IconButton onClick={handleToggle} color="inherit">
                             <CloseIcon />
@@ -55,21 +46,13 @@ const Navbar = () => {
                         </IconButton>
                     )
                 }
-                   {/* <button>{click ? `${<MenuIcon />}` : `${<CloseIcon />}`}</button>  */}
-                {/* <div className='bad_search'>
-                    <SearchIcon onClick={inputHandler} className="search-icon2" />
-                    searchIcon
-                    <LocalMallIcon className='shop-icon' />
-                </div> */}
             </div>
             <ul className={isOpen ? "nav-menu active" : "nav-menu"}>
                 <li className='nav-item'><Link to="/" className='nav-links' onClick={closeMobileMenu} ><HomeIcon />მთავარი</Link></li>
                 <li className='nav-item'><Link to="/jewellery" className='nav-links' onClick={closeMobileMenu} ><DiamondIcon />სამკაული</Link></li>
                 <li className='nav-item'><Link to="/posters" className='nav-links' onClick={closeMobileMenu} ><DynamicFeedIcon />პოსტერები</Link></li>
                 <li className='nav-item'><Link to="/bags" className='nav-links' onClick={closeMobileMenu} ><ShoppingBagIcon />ჩანთები</Link></li>
-                <li className='nav-item'><Link to="/" className='nav-links' onClick={closeMobileMenu} ><ConnectWithoutContactIcon />საკონტაქტო</Link></li>
-                {/* <li className='nav-item'><Link to="/" className='nav-links' onClick={closeMobileMenu} >ავტორიზაცია</Link></li> */}
-                {/* <li className='nav-item'><Link to="/" className='nav-links' onClick={closeMobileMenu} >შესვლა</Link></li> */}
+                <li className='nav-item'><Link to="/order" className='nav-links' onClick={closeMobileMenu} ><ConnectWithoutContactIcon />საკონტაქტო</Link></li>
       </ul>
       </div>
     </div>
