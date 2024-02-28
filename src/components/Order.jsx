@@ -8,14 +8,16 @@ import ArrowCircleDownIcon from '@mui/icons-material/ArrowCircleDown';
 import ArrowCircleUpIcon from '@mui/icons-material/ArrowCircleUp';
 import CheckBoxIcon from '@mui/icons-material/CheckBox';
 import OrderInfo from './OrderInfo';
-import "./order.css"  
+// import "./order.css"  
 
 const Order = () => {
   const [open,setOpen] = useState(false);
+  const [file,setFile] = useState(this)
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     telNumber: '',
+    attachment: file,
     checkbox1: false,
     checkbox2: false,
     checkbox3: false,
@@ -31,12 +33,13 @@ const Order = () => {
     setFormData({ ...formData, [e.target.name]: e.target.type === 'checkbox' ? e.target.checked : e.target.value});
   }
 
+
  
  const handleToggle = () => {
   setOpen(!open)
  }
   const serviceId = "service_ijkoz4q";  
-const templateId = "template_l0c4uxl";
+const templateId = "template_l0c4uxl";  
 const publicKey = "KCRw-B6zKIJegy5ho";
 
 
@@ -48,6 +51,7 @@ const publicKey = "KCRw-B6zKIJegy5ho";
       from_name: formData.name,
       from_email: formData.email,
       from_tel: formData.telNumber,
+      from_attachment: formData.from_attachment,
       from_checkbox1: formData.checkbox1 ? 'Selected' : 'Not Selected',
       from_checkbox2: formData.checkbox2 ? 'Selected' : 'Not Selected',
       from_checkbox3: formData.checkbox3 ? "Selected" : 'Not Selected',
@@ -85,11 +89,12 @@ const publicKey = "KCRw-B6zKIJegy5ho";
         <input type="tel" name="telNumber" placeholder='ნომერი' value={formData.telNumber} onChange={handleChange} />
         <PermPhoneMsgIcon className='icon'/>
       </div>
-      {/* <div className="input-box">
-        <input type="tel" name="telNumber" placeholder='ფაილის მიმაგრება' value={formData.telNumber} onChange={handleChange} />
+      <div className="input-box">
+        <label for="from_attachment">from_attachment</label>
+        <input type="file" name="from_attachment" id="frmo_attachment"  onChange={handleChange} />
         <PermPhoneMsgIcon className='icon'/>
-      </div> */}
-
+      </div>
+   
       {/* Check Boxes */}
       <div className="wrapp">
       <div onClick={handleToggle} className="select-option">{open ? 'დახურვა' : `პოსტერი ზომების მიხედვით `}</div>
