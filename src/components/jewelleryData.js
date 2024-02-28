@@ -9,43 +9,43 @@ import Img7 from "../assets/jewellery/IMG_4427.jpg"
 const jewelleryList = [{
         id: 1,
         title: "სამკაული",
-        price: 80,
+        price: 70,
         img: `${Img123}`,
     },
     {
         id: 2,
         title: "სამკაული",
-        price: 80,
+        price: 70,
         img: `${Img2}`,
     },
     {
         id: 3,
         title: "სამკაული",
-        price: 80,
+        price: 70,
         img: `${Img3}`,
     },
     {
         id: 4,
         title: "სამკაული",
-        price: 80,
+        price: 70,
         img: `${Img4}`,
     },
     {
         id: 5,
         title: "სამკაული",
-        price: 80,
+        price: 70,
         img: `${Img5}`,
     },
     {
         id: 6,
         title: "სამკაული",
-        price: 80,
+        price: 70,
         img: `${Img6}`,
     },
     {
         id: 7,
         title: "სამკაული",
-        price: 80,
+        price: 70,
         img: `${Img7}`,
     }
 ]
