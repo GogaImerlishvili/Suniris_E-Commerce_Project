@@ -1,5 +1,5 @@
 import React from 'react';
-import {Home,Contact,Loginform,Privacy,Signup,Navbar,Footer,Order} from './components/index';
+import {Home,Signup,Navbar,Footer,Order} from './components/index';
 import {BrowserRouter as Router,Routes,Route} from "react-router-dom"
 import CartForm from './components/CartForm';
 import JewelleryCartForm from './components/JewelleryCartForm';

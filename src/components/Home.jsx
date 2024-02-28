@@ -1,15 +1,11 @@
 import React from 'react'
 import Img from "../images/2-eyes-50-50.jpg"
 import "./home.css"
-import CartForm from './CartForm'
 import Slider from './Slider'
 import list from './data'
 import TakePic from './TakePic'
 import InstaFeed from './InstaFeed'
 import { Link } from 'react-router-dom'
-
-// import Order from './Order'
-
 
 const Home = () => {
   return (
@@ -24,12 +20,10 @@ const Home = () => {
       <div className='slider'>
       <Slider slides={list} />
       </div>
-       {/* <CartForm /> */}
        <div className='take-pic'>
         <TakePic />
         </div>
         <InstaFeed />
-       {/* </div> */}
       </>
   )
 }
