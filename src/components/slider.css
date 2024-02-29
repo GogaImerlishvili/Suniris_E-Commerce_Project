@@ -214,3 +214,9 @@
       font-size: 14px;
     }
   }
+
+  @media screen and (max-width: 280px){
+    .swiper-slide{
+      height:180px;
+    }
+  }

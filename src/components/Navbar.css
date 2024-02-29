@@ -324,9 +324,17 @@
 
 @media screen and (max-width: 280px){
   .navbar-logo{
-    margin-top: -1.3rem;
+    margin-top: -1.5rem;
   }
-  .logo-title{
-    font-size:24px;
+  .nav-menu.active {
+    background: #242222;
+    left: 0;
+    margin-top: 5%;
+    margin-left: 0%;
+    width: 40%;
+    opacity: 1;
+    transition: all 0.5s ease;
+    z-index: 1;
   }
+
 }

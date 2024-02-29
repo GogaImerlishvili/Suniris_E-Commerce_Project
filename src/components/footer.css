@@ -82,3 +82,9 @@
         font-size: 11px;
     }
 }
+
+@media screen and (max-width: 280px){
+    .copy-right span p{
+        font-size:8px;
+    }
+  }

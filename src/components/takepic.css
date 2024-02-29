@@ -416,3 +416,17 @@ display:none;
     width:110%;
    }
 }
+
+@media screen and (max-width: 280px){
+    .button{
+      font-size: 10px;
+    }
+    .roman-scroll{
+        width: 110%;
+        /* height:250px; */
+    }
+    .scroll-content p{
+        width:100%;
+        font-size:11px;
+    }
+  }
