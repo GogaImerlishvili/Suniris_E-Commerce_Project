@@ -1,5 +1,4 @@
 import React from 'react'
-import Navbar from './Navbar'
 import "../../styles/shopcart.css"
 const BagsShop = ({img,title,price}) => {
  

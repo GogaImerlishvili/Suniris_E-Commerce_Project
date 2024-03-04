@@ -26,7 +26,6 @@ const Slider = ({slides}) => {
   </SwiperSlide>
     ))}
   </Swiper>
-  // </div>
   )
 }
 }

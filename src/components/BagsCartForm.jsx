@@ -1,7 +1,6 @@
-import React from 'react'
 import Navbar from './cartcomponents/Navbar'
 import Bags from './cartcomponents/Bags'
-import BagsShop from './cartcomponents/BagsShop'
+
 import "./cartform.css"
 const BagsCartForm = () => {
   return (

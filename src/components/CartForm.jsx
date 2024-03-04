@@ -1,4 +1,3 @@
-import React from 'react'
 import Navbar from './cartcomponents/Navbar'
 import Suniris from './cartcomponents/Suniris'
 import ShopCart from './cartcomponents/ShopCart'

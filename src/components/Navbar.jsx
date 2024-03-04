@@ -1,24 +1,19 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-// import Img from "../images/logo.png"
 import Img from "../images/photo-output (1).png"
 import "./Navbar.css"
-import SearchIcon from '@mui/icons-material/Search'; 
 import MenuIcon from '@mui/icons-material/Menu';
-import LocalMallIcon from '@mui/icons-material/LocalMall';
 import CloseIcon from '@mui/icons-material/Close';
 import { useState } from 'react';
-import Header from './Header';
-import { Menu } from '@mui/base';
 import { IconButton } from '@mui/material';
 import HomeIcon from '@mui/icons-material/Home';
 import DiamondIcon from '@mui/icons-material/Diamond';
 import DynamicFeedIcon from '@mui/icons-material/DynamicFeed';
 import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
 import ConnectWithoutContactIcon from '@mui/icons-material/ConnectWithoutContact';
+
 const Navbar = () => {
     const [isOpen,setIsOpen] = useState(false)
-    const [menu,setMenu] = useState(false)
 
     const closeMobileMenu = () => {
         setIsOpen(false)  

@@ -1,10 +1,8 @@
-import React from 'react'
 import "./footer.css"
-import { Link } from 'react-router-dom'
 import Logo from "../images/photo-output (1).png"
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
+
 const Footer = () => {
   let date = new Date().getFullYear();
   console.log(date)
